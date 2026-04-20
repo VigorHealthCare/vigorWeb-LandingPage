@@ -1,0 +1,19 @@
+# Project Specific
+spec.md
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Environments
+.env*
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temp
+tmp/
+.temp/
