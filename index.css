@@ -712,19 +712,28 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Add JS to toggle */
+        display: none;
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
         width: 100%;
         background: var(--bg-white);
         flex-direction: column;
         padding: 2rem;
         box-shadow: var(--shadow-md);
+        border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav-links.active {
+        display: flex;
     }
     
     .menu-toggle {
         display: block;
+    }
+
+    .menu-toggle.active i::before {
+        content: "\f00d";
     }
     
     .footer-container {
