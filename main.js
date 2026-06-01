@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Currency Toggle Logic
   const currencyBtns = document.querySelectorAll(".currency-btn");
   const priceElements = document.querySelectorAll(".price[data-diaspora]");
+  const pocketNotes = document.querySelectorAll(".pocket-note[data-diaspora]");
 
   currencyBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -75,6 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
           el.textContent = currency === "naira" ? el.dataset.naira : el.dataset.diaspora;
           el.classList.remove("switching");
         }, 200);
+      });
+
+      // Switch out-of-pocket note
+      pocketNotes.forEach((el) => {
+        const textSpan = el.querySelector(".pocket-text");
+        if (textSpan) {
+          textSpan.textContent = currency === "naira" ? el.dataset.naira : el.dataset.diaspora;
+        }
       });
     });
   });
