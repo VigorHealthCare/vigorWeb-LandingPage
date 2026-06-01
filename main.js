@@ -55,6 +55,29 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Currency Toggle Logic
+  const currencyBtns = document.querySelectorAll(".currency-btn");
+  const priceElements = document.querySelectorAll(".price[data-diaspora]");
+
+  currencyBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Toggle active state on buttons
+      currencyBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const currency = btn.dataset.currency;
+
+      // Animate the price change
+      priceElements.forEach((el) => {
+        el.classList.add("switching");
+        setTimeout(() => {
+          el.textContent = currency === "naira" ? el.dataset.naira : el.dataset.diaspora;
+          el.classList.remove("switching");
+        }, 200);
+      });
+    });
+  });
   // Fade-in Animation Logic
   const fadeElements = document.querySelectorAll(".fade-in");
   const observerOptions = {

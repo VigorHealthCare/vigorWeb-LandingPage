@@ -189,51 +189,112 @@
                 <h2>Membership Tiers</h2>
                 <p>Choose a plan that fits your family's needs. No hidden fees, just peace of mind.</p>
             </div>
-            <div class="pricing-grid">
+
+            <!-- Currency Toggle -->
+            <div class="currency-toggle-wrapper fade-in">
+                <button class="currency-btn active" id="btn-diaspora" data-currency="diaspora">
+                    <i class="fa-solid fa-globe"></i> Diaspora (USD)
+                </button>
+                <button class="currency-btn" id="btn-naira" data-currency="naira">
+                    <i class="fa-solid fa-naira-sign"></i> Local (NGN)
+                </button>
+            </div>
+
+            <div class="pricing-grid-6">
+                <!-- Free Care (Trial) -->
                 <div class="price-card fade-in">
-                    <h3>Starter</h3>
-                    <!-- <div class="price">$5<span>/mo</span></div> -->
-                    <div class="price">Coming <span>soon</span></div>
+                    <div class="plan-badge trial-badge">Trial</div>
+                    <h3>Free Care</h3>
+                    <div class="price" data-diaspora="Free" data-naira="Free">Free</div>
+                    <div class="price-sub">per month</div>
                     <ul class="price-features">
-                        <li><i class="fa-solid fa-check"></i> 1 Loved One</li>
-                        <li><i class="fa-solid fa-check"></i> EMR Access</li>
+                        <li><i class="fa-solid fa-check"></i> 1 User</li>
+                        <li><i class="fa-solid fa-check"></i> 1 Basic Consult / Month</li>
+                        <li><i class="fa-solid fa-check"></i> Limited EHR Dashboard</li>
+                        <li><i class="fa-solid fa-xmark text-muted-icon"></i> No Video Consultation</li>
+                        <li><i class="fa-solid fa-xmark text-muted-icon"></i> No E-Prescription</li>
+                    </ul>
+                    <div class="pocket-note"><i class="fa-solid fa-info-circle"></i> Out-of-pocket: ₦13,499</div>
+                    <a href="#waitlist" class="btn btn-outline w-100">Get Started Free</a>
+                </div>
+
+                <!-- Basic Care -->
+                <div class="price-card fade-in" style="animation-delay: 0.05s;">
+                    <h3>Basic Care</h3>
+                    <div class="price" data-diaspora="$9.99" data-naira="₦13,499">$9.99</div>
+                    <div class="price-sub">per month</div>
+                    <ul class="price-features">
+                        <li><i class="fa-solid fa-check"></i> 1 User</li>
+                        <li><i class="fa-solid fa-check"></i> 1 Basic Consult / Month</li>
+                        <li><i class="fa-solid fa-check"></i> 1 Monthly Checkup</li>
+                        <li><i class="fa-solid fa-check"></i> E-Pharma (Limited Alerts)</li>
                         <li><i class="fa-solid fa-check"></i> Appointment Reminders</li>
                     </ul>
                     <a href="#waitlist" class="btn btn-outline w-100">Select Plan</a>
                 </div>
-                <div class="price-card fade-in">
-                    <h3>Basic</h3>
-                    <!-- <div class="price">$15<span>/mo</span></div> -->
-                    <div class="price">Coming <span>soon</span></div>
-                    <ul class="price-features">
-                        <li><i class="fa-solid fa-check"></i> 2 Loved Ones</li>
-                        <li><i class="fa-solid fa-check"></i> 1 Monthly Video Consult</li>
-                        <li><i class="fa-solid fa-check"></i> EMR + Prescriptions</li>
-                    </ul>
-                    <a href="#waitlist" class="btn btn-outline w-100">Select Plan</a>
-                </div>
-                <div class="price-card featured fade-in">
+
+                <!-- Standard Care (Most Popular) -->
+                <div class="price-card featured fade-in" style="animation-delay: 0.1s;">
                     <div class="recommend">Most Popular</div>
-                    <h3>Standard</h3>
-                    <!-- <div class="price">$30<span>/mo</span></div> -->
-                    <div class="price">Coming <span>soon</span></div>
+                    <h3>Standard Care</h3>
+                    <div class="price" data-diaspora="$18.99" data-naira="₦25,499">$18.99</div>
+                    <div class="price-sub">per month</div>
                     <ul class="price-features">
-                        <li><i class="fa-solid fa-check"></i> 3 Loved Ones</li>
-                        <li><i class="fa-solid fa-check"></i> 3 Monthly Video Consults</li>
-                        <li><i class="fa-solid fa-check"></i> Full Health Monitoring</li>
+                        <li><i class="fa-solid fa-check"></i> 2 Users</li>
+                        <li><i class="fa-solid fa-check"></i> 2 Consults / Month</li>
+                        <li><i class="fa-solid fa-check"></i> 1 Checkup / User / Month</li>
+                        <li><i class="fa-solid fa-check"></i> Specialist Referral</li>
+                        <li><i class="fa-solid fa-check"></i> HMO Integration</li>
+                        <li><i class="fa-solid fa-check"></i> E-Pharma + Alerts</li>
                     </ul>
                     <a href="#waitlist" class="btn btn-primary w-100">Select Plan</a>
                 </div>
-                <div class="price-card fade-in">
-                    <h3>Advanced</h3>
-                    <!-- <div class="price">$45<span>/mo</span></div> -->
-                    <div class="price">Coming <span>soon</span></div>
+
+                <!-- Care Plus -->
+                <div class="price-card fade-in" style="animation-delay: 0.15s;">
+                    <h3>Care Plus</h3>
+                    <div class="price" data-diaspora="$38.99" data-naira="₦53,499">$38.99</div>
+                    <div class="price-sub">per month</div>
                     <ul class="price-features">
-                        <li><i class="fa-solid fa-check"></i> 5 Loved Ones</li>
-                        <li><i class="fa-solid fa-check"></i> Unlimited Consults</li>
-                        <li><i class="fa-solid fa-check"></i> Priority Support</li>
+                        <li><i class="fa-solid fa-check"></i> 4 Users</li>
+                        <li><i class="fa-solid fa-check"></i> 4 Consults / Month</li>
+                        <li><i class="fa-solid fa-check"></i> 2 Checkups / Month</li>
+                        <li><i class="fa-solid fa-check"></i> EMR Access + Prescriptions</li>
+                        <li><i class="fa-solid fa-check"></i> Mental Health Support</li>
+                        <li><i class="fa-solid fa-check"></i> Chronic Care Plans</li>
                     </ul>
                     <a href="#waitlist" class="btn btn-outline w-100">Select Plan</a>
+                </div>
+
+                <!-- Ultra Care -->
+                <div class="price-card fade-in" style="animation-delay: 0.2s;">
+                    <h3>Ultra Care</h3>
+                    <div class="price" data-diaspora="$58.99" data-naira="₦80,499">$58.99</div>
+                    <div class="price-sub">per month</div>
+                    <ul class="price-features">
+                        <li><i class="fa-solid fa-check"></i> 6 Users</li>
+                        <li><i class="fa-solid fa-check"></i> 6 Consults / Month</li>
+                        <li><i class="fa-solid fa-check"></i> Weekly Checkups</li>
+                        <li><i class="fa-solid fa-check"></i> Mental Health + Chronic Care</li>
+                        <li><i class="fa-solid fa-check"></i> All Care Plus Features</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-outline w-100">Select Plan</a>
+                </div>
+
+                <!-- Flexi Care -->
+                <div class="price-card flexi fade-in" style="animation-delay: 0.25s;">
+                    <div class="plan-badge flexi-badge">Custom</div>
+                    <h3>Flexi Care</h3>
+                    <div class="price" data-diaspora="$78.99+" data-naira="₦107,499+">$78.99+</div>
+                    <div class="price-sub">per month</div>
+                    <ul class="price-features">
+                        <li><i class="fa-solid fa-check"></i> Bespoke Package</li>
+                        <li><i class="fa-solid fa-check"></i> Priority Scheduling</li>
+                        <li><i class="fa-solid fa-check"></i> All Features Included</li>
+                        <li><i class="fa-solid fa-check"></i> Dedicated Account Manager</li>
+                        <li><i class="fa-solid fa-check"></i> Custom User Count</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-outline w-100">Contact Us</a>
                 </div>
             </div>
         </div>
