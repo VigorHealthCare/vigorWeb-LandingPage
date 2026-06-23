@@ -880,3 +880,24 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ==========================================================================
+   Sub Pages (About, Terms, Privacy)
+   ========================================================================== */
+.page-header {
+    padding: 10rem 0 3rem;
+    background-color: var(--color-primary);
+    color: var(--text-white);
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.document-content {
+    padding: 5rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
